@@ -1,0 +1,81 @@
+/* src/components/Home.css */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 56px; /* Adjust this value based on your navbar height */
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar .nav-link {
+    padding: 0.5rem 1rem;
+    color: #333;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Should match sidebar width */
+    padding: 20px;
+  }
+  
+  .user-avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        height: 100%;
+        padding-top: 56px;
+        transform: translateX(-100%);
+        display: flex; /* Enable flexbox layout */
+        flex-direction: column; 
+        overflow-y: auto; 
+    }
+  
+    .sidebar.show {
+      transform: translateX(0);
+    }
+  
+    .main-content {
+      margin-left: 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  /* Ensure the logout button is always at the bottom of the sidebar */
+  .sidebar .mt-auto {
+    margin-top: auto !important;
+    padding: 1rem;
+  }
+  

@@ -1,0 +1,50 @@
+.ajouter-agent-container {
+    max-width: 800px; /* Adjust container width as needed */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .profile-pic-container {
+    position: relative; /* For positioning the upload button */
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensure image fits within the circle */
+  }
+  
+  .profile-pic-container input[type='file'] {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Hide the default input */
+  }
+  
+  /* Style the file input area */
+  .profile-pic-container:hover input[type='file'] {
+    opacity: 1; /* Show on hover for better UX */
+    cursor: pointer; 
+  }
+  
+  /* Style form labels and inputs */
+  .form-label {
+    font-weight: 500;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  /* Optional: Style the buttons further */
+  .btn-success {
+    background-color: #28a745; 
+    border-color: #28a745; 
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; 
+    border-color: #6c757d; 
+  }
